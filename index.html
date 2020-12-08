@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <!-- CDN -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <style>
+    body{background-color:;}
+    .Btn{
+      padding: 10px 20px;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+    .modal-container{
+      position: absolute;
+      top:0;
+      left:0;
+      bottom: 0;
+      right:0;
+      background-color: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .close{
+      color:#fff;
+      font-size:30px;
+      position: absolute;
+      top:40px;
+      right:40px;
+      cursor: pointer;
+    }
+    .modal {
+      width:1400px;
+      height: 700px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 10px 10px 3px rgba(255, 255, 255,0.4);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button class="Btn">Modal</button>
+  <div class="modal-container">
+    <a class="close" title="닫기">X</a>
+    <div class="modal">
+      <h2>안녕하세요 모달 연습입니다.</h2>
+    </div>
+  </div>  
+    <script>
+      $(function(){
+        $('.modal-container').hide();
+
+        $('.Btn').on('click', function() {
+          $('.modal-container').fadeIn(500);
+        })
+
+        $('.close').on('click', function() {
+          $('.modal-container').fadeOut(500);
+        })
+      });  
+    </script>
+</body>
+</html>
