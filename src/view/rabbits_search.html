@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: #000;
+    }
+
+    div + div {
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 20px;
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn">Find a rabbit🐇</button>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div class="rabbit"><img src="../assets/img/rabbit.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+  <div><img src="../assets/img/carrot.png" alt=""></div>
+
+  <script>
+    const rabbit = document.querySelector('.rabbit');
+    const btn = document.querySelector('.btn');
+    const rect = rabbit.getBoundingClientRect();
+    console.log(rect)
+
+    btn.addEventListener('click', ()=> {
+      rabbit.scrollIntoView({behavior : "smooth", block: 'center'});
+    });
+
+  </script>
+</body>
+</html>
