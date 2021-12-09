@@ -23,21 +23,16 @@
     .horizontal {
       width: 100%;
       height: 1px;
-      top:50%;
     }
 
     
     .vertical {
       height: 100%;
       width: 1px;
-      left:50%;
     }
 
     .target {
       position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%, -50%);
       width: 120px;
       height: 120px;
       background:url('../assets/img/target.png');
@@ -45,9 +40,7 @@
 
     .tag {
       position: absolute;
-      top:50%;
-      left: 50%;
-      transform: translate(20px, 20px);
+      margin: 20px;
       color:#fff;
       font-size: 24px;
     }
@@ -67,21 +60,22 @@
     const tag = document.querySelector('.tag');
     const vertical = document.querySelector('.vertical');
     const horizontal = document.querySelector('.horizontal');
+    const targetRect = target.getBoundingClientRect();
+    const trargetHalfWidth = targetRect.width / 2;
+    const trargetHalfHeight = targetRect.height / 2;
 
     document.addEventListener('mousemove', (event)=> {
-      const targetX = event.clientX;
-      const targetY = event.clientY;
+      const x = event.clientX;
+      const y = event.clientY;
 
-      target.style.left = targetX + 'px';
-      target.style.top = targetY + 'px';
-      tag.style.left = targetX + 'px';
-      tag.style.top = targetY + 'px';
-      vertical.style.left = targetX + 'px';
-      horizontal.style.top = targetY + 'px';
+      tag.style.transform = `translate(${x}px, ${y}px)`;
+      target.style.transform = `translate(${x - trargetHalfWidth}px, ${y - trargetHalfHeight}px)`;
+      vertical.style.transform = `translateX(${x}px)`;
+      horizontal.style.transform = `translateY(${y}px)`;
 
       tag.innerHTML = `
-      X 좌표 : ${target.style.left = targetX + 'px'} <br/>
-      Y 좌표 : ${target.style.top = targetY + 'px'}
+      X 좌표 : ${x}px <br/>
+      Y 좌표 : ${y}px
       `;
     });
 
