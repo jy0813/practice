@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.alert_box {
+  display: none;
+  background: #aba8f4;
+  color:#4646b4;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.alert_box p {
+  display: inline-block;
+}
+
+.alert_box button {
+  display: inline-block;
+  cursor: pointer;
+}

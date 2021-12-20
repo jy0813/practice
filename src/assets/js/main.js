@@ -3,6 +3,12 @@
 const items = document.querySelector('.items')
 const input = document.querySelector('.footer_input')
 const addBtn = document.querySelector('.footer_btn')
+// const form = documnet.querySelector('.new_form')
+
+// form.addEventListener('submit', (event) => {
+//   event.preventDefault();
+//   onAdd();
+// });
 
 function onAdd() {
   // 1. 사용자가 입력한 텍스트를 받아온다.
