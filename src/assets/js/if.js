@@ -7,12 +7,12 @@ const input = document.querySelector('.test_input');
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 
-document.querySelector('form').addEventListener('submit', function(e) {
-  if(email.value == '') {
-    e.preventDefault();
-    document.querySelector('.error_txt').style.display = "block";
-  }
-});
+// document.querySelector('form').addEventListener('submit', function(e) {
+//   if(email.value == '') {
+//     e.preventDefault();
+//     document.querySelector('.error_txt').style.display = "block";
+//   }
+// });
 
 
 btn.addEventListener('click', () => {
@@ -55,3 +55,13 @@ function 삼육구게임() {
 }
 
 삼육구게임();
+
+//[] [찾을 문자의 범위]
+/[A-z]/.test('s');
+
+//[\S] 모든 문자와 모든 기호(모든 문자 1개)
+/\S@/.test('#');
+
+//[\S]+뒤에도 계속 찾아주세요
+
+/\S+@\S+.\S/.test();
