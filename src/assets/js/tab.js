@@ -2,8 +2,8 @@
 
 const tabBtn = document.querySelectorAll('.tab-button');
 const tabCnt = document.querySelectorAll('.tab-content');
-const tabNow = 0;
 
+//반복문으로 만들기 
 
 tabBtn.forEach(function(el, i){
   el.addEventListener('click', function(){
