@@ -64,4 +64,19 @@ function 삼육구게임() {
 
 //[\S]+뒤에도 계속 찾아주세요
 
-/\S+@\S+.\S/.test();
+/\S+@\S+.\S+/.test()
+
+document.querySelector('form').addEventListener('submit', function(){
+  const 입력한이메일 = email.value;
+  if(/\S+@\S+.\S+/.test(입력한이메일) == false) {
+    e.preventDefault();
+  } else if(입력한이메일 == ''){
+    e.preventDefault();
+  }
+  const 입력한패스워드 = password.value;
+  if(/[A-Z]+/.test(입력한패스워드) == false) {
+    e.preventDefault();
+  }
+});
+
+ 
