@@ -23,6 +23,16 @@ close.addEventListener('click', () => {
   modalWrap.style.display = "none";
 })
 
+modalWrap.addEventListener('click', (e) => {
+  if(e.target == e.currentTarget) {
+    modalWrap.style.display = "none";
+  }
+})
+
+// e.target; 지금 실제로 클릭한 요소
+//e.currentTarget; 지금 이벤트리스너가 달린곳 (this)
+//e.preventDefault(); 기본동작 막기
+
 if(1 == 3) {
   console.log('안녕');
 } else if (1 < 2) {
