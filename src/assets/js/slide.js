@@ -1,4 +1,4 @@
-'use stric'
+'use stric;'
 
 let menu = document.querySelector('.left_menu');
 let btn = document.querySelector('.btn');
