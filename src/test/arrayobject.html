@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h4>상품제목</h4>
+  <p>상품내용</p>
+  <div style="margin-bottom: 500px"></div>
+  
+  <script>
+    
+    //Array Object
+
+    var array = ['bmw', '520'];
+
+    var object = {brand : 'bmw', model : '520'};
+
+    // document.querySelector('h4').innerHTML = array[0];  
+    // document.querySelector('p').innerHTML = object.model;
+
+    var data = [{brand : 'bmw'}, {model : 520}];
+
+    document.querySelector('h4').innerHTML = data[0].brand;
+    document.querySelector('p').innerHTML = data[1].model;
+
+  </script>
+</body>
+</html>
