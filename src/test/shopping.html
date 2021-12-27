@@ -54,23 +54,12 @@
       { id : 2, price : 60000, title : 'Black Monastery' }
     ]
 
-    for(let i = 0; i < products.length; i++) {
-      $('.title').eq(i).html(products[i].title);
-      $('.price').eq(i).html(`가격 : ${products[i].price}`);
-    }
-
-    // $('.title').eq(0).html(products[0].title);
-    //  $('.price').eq(0).html('가격 : ' + products[0].price);
-    //  $('.title').eq(1).html(products[1].title);
-    //  $('.price').eq(1).html('가격 : ' + products[1].price);
-    //  $('.title').eq(2).html(products[2].title);
-    //  $('.price').eq(2).html('가격 : ' + products[2].price);
-
     const title = document.querySelectorAll('.title');
     const price = document.querySelectorAll('.price');
 
     for(let i = 0; i < products.length; i++) {
-      title.length[i]
+      title[i].innerHTML = `${products[i].title}`;
+      price[i].innerHTML = `가격 : ${products[i].price}`;
     }
 
      var 어레이 = [7,3,5,2,40];

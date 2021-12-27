@@ -6,17 +6,19 @@
 const select = document.querySelector('#option1');
 const select2 = document.querySelector('#option2');
 const sizeSelect = document.querySelector('.size-select');
-const options = document.createElement('option');
-
+let size = [90, 100, 105, 110, 115, 120, 125];
 
 
 select.addEventListener('change', () => {
   if (select.value == '셔츠') {
-    let size = [90, 100, 105, 110, 115, 120, 125];
-    for(let i = 0; i < 7; i++) {
-      options.innerHTML = `<option>${size[i]}</option>`;
-        select2.append(options);
+    for (let i = 0; i < size.length; i++) {
+      const options = document.createElement('option');
+      options.value = size[i];
+      options.text = size[i];
+      select2.append(options)
     }
+  } else {
+    document.querySelector("#option2").innerHTML = "";
   }
 });
 
