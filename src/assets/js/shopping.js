@@ -18,64 +18,61 @@ var products = [{
   }
 ]
 
+
+// for (let i = 0; i < products.length; i++) {
+//   title[i].innerHTML = `${products[i].title}`;
+//   price[i].innerHTML = `가격 : ${products[i].price}`;
+// }
+
 const title = document.querySelectorAll('.title');
 const price = document.querySelectorAll('.price');
-const card = document.querySelectorAll('.card');
+const card = document.querySelector('.card-group');
+
+
+let allMarkup = ''; //통으로 모을 변수
 
 for (let i = 0; i < products.length; i++) {
-  title[i].innerHTML = `${products[i].title}`;
-  price[i].innerHTML = `가격 : ${products[i].price}`;
+  const markup = `
+  <div class="card">
+      <img src="https://via.placeholder.com/600">
+      <div class="card-body">
+        <h5 class="title">${products[i].title}</h5>
+        <p class="price">가격 : ${products[i].price}</p>
+        <button class="btn btn-danger">주문하기</button>
+      </div>
+    </div>`;
+
+    allMarkup += markup;  //allMarkup = allMarkup + markup; 계속 합침
 }
 
-var array = [1, 3, 2, 5, 6];
-
-
-//  기능정렬
-
-var NewArray = array.filter((a) => {
-  return a < 4
-});
-
-
-// array 자료에 전부 무언가를 해주고 싶을때
-
-var newArray2 = array.map((a) => {
-  return a * 2;
-})
+card.innerHTML = allMarkup;
 
 
 
+
+//가격순 정렬
 document.querySelector('#sort').addEventListener('click', () => {
-  products.sort(function (a, b) {
+  products.sort(function (a,b) {
     return a.price - b.price;
-  });
-
-  for (let i = 0; i < products.length; i++) {
-    title[i].innerHTML = `${products[i].title}`;
-    price[i].innerHTML = `가격 : ${products[i].price}`;
-  }
+  })
 })
 
+//가나다순 정렬
 document.querySelector('#sort2').addEventListener('click', () => {
-  products.sort(function (a, b) {
-    if (a.title < b.title) {
+  products.sort(function (a,b) {
+    if(a.title < b.title) {
       return -1;
     }
-    if (a.title > b.title) {
+    if(a.title > b.title) {
       return 1;
     }
-    return 0;
-  });
+  })
+})
 
-  for (let i = 0; i < products.length; i++) {
-    title[i].innerHTML = `${products[i].title}`;
-    price[i].innerHTML = `가격 : ${products[i].price}`;
-  }
-});
-
+//5만원 이하 가격 필터
 document.querySelector('#sort3').addEventListener('click', () => {
   const result = products.filter((item) => {
     return item.price <= 50000;
   });
   console.log(result);
-})
+});
