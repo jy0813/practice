@@ -6,19 +6,36 @@
 const select = document.querySelector('#option1');
 const select2 = document.querySelector('#option2');
 const sizeSelect = document.querySelector('.size-select');
-let size = [90, 100, 105, 110, 115, 120, 125];
+let size = [90, 100, 105, 110, 115];
+let size2 = [28, 30, 32, 33, 34]
+
+window.addEventListener('load', () => {
+  for (let i = 0; i < size2.length; i++) {
+    const options = document.createElement('option');
+    options.value = size2[i];
+    options.text = size2[i];
+    select2.append(options)
+}
+})
 
 
 select.addEventListener('change', () => {
-  if (select.value == '셔츠') {
+   if(select.value == '바지') {
+    document.querySelector("#option2").innerHTML = "";
+    for (let i = 0; i < size2.length; i++) {
+      const options = document.createElement('option');
+      options.value = size2[i];
+      options.text = size2[i];
+      select2.append(options)
+  }
+  }else if (select.value == '셔츠') {
+    document.querySelector("#option2").innerHTML = "";
     for (let i = 0; i < size.length; i++) {
       const options = document.createElement('option');
       options.value = size[i];
       options.text = size[i];
       select2.append(options)
     }
-  } else {
-    document.querySelector("#option2").innerHTML = "";
   }
 });
 
