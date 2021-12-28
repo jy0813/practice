@@ -12,6 +12,7 @@
 
   <title>title</title>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="../assets/js/shopping.js" defer></script>
 </head>
 
 <body>
@@ -45,38 +46,10 @@
 
   <div class="container mt-4">
     <button class="btn btn-danger" id="sort">가격순정렬</button>
+    <button class="btn btn-danger" id="sort2">가나다순정렬</button>
+    <button class="btn btn-danger" id="sort3">5만원이하 가격필터</button>
   </div>
   
-  <script>
-    var products = [
-      { id : 0, price : 70000, title : 'Blossom Dress' },
-      { id : 1, price : 50000, title : 'Springfield Shirt' },
-      { id : 2, price : 60000, title : 'Black Monastery' }
-    ]
-
-    const title = document.querySelectorAll('.title');
-    const price = document.querySelectorAll('.price');
-
-    for(let i = 0; i < products.length; i++) {
-      title[i].innerHTML = `${products[i].title}`;
-      price[i].innerHTML = `가격 : ${products[i].price}`;
-    }
-
-     var 어레이 = [7,3,5,2,40];
-
-     products.sort((a,b) => {
-      return b - a;
-     });
-
-
-    document.querySelector('#sort').addEventListener('click', () => {
-      products.sort(function(a,b) {
-        return a.price - b.price 
-      });
-    })
-
-
-  </script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
