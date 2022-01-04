@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .gray {
+      background: lightgray;
+      height: 2000px;
+      margin-top: 500px;
+    }
+
+    .clearfix::before,
+    .clearfix::after {
+      content: '';
+      display: table;
+    }
+
+    .clearfix::after {
+      clear: both;
+    }
+
+    .image {
+      position: sticky;
+      top:100px;
+      float: right;
+      width: 300px;
+    }
+  </style>
+</head>
+<body style="background-color: gray; height: 3000px;">
+  <div class="gray">
+    <div class="image clearfix">
+      <img src="../assets/img/appletv.jpg" width="100%">
+    </div>
+    <div class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aliquid vitae enim quod nobis excepturi repudiandae cumque ipsa, fugit, praesentium aspernatur neque ex magnam ad itaque, ab repellendus voluptate id?
+    </div>
+  </div>
+</body>
+</html>
