@@ -13,18 +13,18 @@ const PRODUCT_LIST = [
   },
   {
     id: 2,
-    price: 60000,
+    price: 30000,
     title: 'Black Monastery'
   },
   {
     id: 3,
-    price: 60000,
-    title: 'Black Monastery'
+    price: 25000,
+    title: 'Asap'
   },
   {
     id: 4,
     price: 60000,
-    title: 'Black Monastery'
+    title: 'Conver'
   }
 ];
 
