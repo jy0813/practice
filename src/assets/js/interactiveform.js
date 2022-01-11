@@ -19,6 +19,7 @@ window.addEventListener('load', () => {
 })
 
 
+
 select.addEventListener('change', () => {
    if(select.value == '바지') {
     document.querySelector("#option2").innerHTML = "";
