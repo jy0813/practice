@@ -1,4 +1,4 @@
-'use stric;'
+'use strict;'
 
 //전역변수
 

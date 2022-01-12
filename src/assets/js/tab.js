@@ -1,4 +1,4 @@
-'use strict';
+'use strictt';
 
 const tabBtn = document.querySelectorAll('.tab-button');
 const tabCnt = document.querySelectorAll('.tab-content');

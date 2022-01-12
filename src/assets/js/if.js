@@ -1,4 +1,4 @@
-'use stric;'
+'use strict;'
 
 const btn = document.querySelector('.btn');
 const modalWrap = document.querySelector('.modal_wrap');

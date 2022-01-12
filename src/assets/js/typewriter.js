@@ -1,4 +1,4 @@
-'use stric;'
+'use strict;'
 
 const btn = document.querySelector('.btn');
 const h1 = document.querySelector('h1');

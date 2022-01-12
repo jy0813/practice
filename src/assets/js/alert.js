@@ -1,4 +1,4 @@
-'use stric;'
+'use strict;'
 
 function alertOn(파라미터, 파라미터2) {
   document.querySelector('P').innerHTML = 파라미터;
