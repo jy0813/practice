@@ -1,4 +1,4 @@
-'use strict;'
+'use strict';
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;

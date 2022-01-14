@@ -1,4 +1,4 @@
-'use strict;'
+'use strict';
 
 $.ajax({
   url: 'https://codingapple1.github.io/hello.txt',
