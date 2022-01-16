@@ -49,3 +49,15 @@ var 자식 = {};
 
 자식.__proto__ = 부모;
 
+
+function Student(이름, 나이) { 
+  this.name = 이름;
+  this.age = 나이;
+  this.sayHi = function() {
+    console.log(`안녕하세요 저는 ${this.name} 이고 ${this.age} 살 입니다.`)
+  }
+}
+
+var 학생1 = new Student('Kim',26);
+var 학생2 = new Student('Jin',30);
+var 학생3 = new Student('lee',29);
